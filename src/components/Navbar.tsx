@@ -19,7 +19,6 @@ const Navbar = () => {
           <a href="#features" className="text-muted-foreground hover:text-pdf-primary transition-colors">Features</a>
           <a href="#tools" className="text-muted-foreground hover:text-pdf-primary transition-colors">Tools</a>
           <a href="#how-it-works" className="text-muted-foreground hover:text-pdf-primary transition-colors">How It Works</a>
-          {/* Removed pricing link as everything is free now */}
         </nav>
         
         <div className="hidden md:flex items-center">

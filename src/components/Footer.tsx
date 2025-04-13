@@ -32,12 +32,13 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Product</h3>
+            <h3 className="text-lg font-semibold mb-4">Tools</h3>
             <ul className="space-y-2">
-              <li><a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">Features</a></li>
-              <li><a href="#tools" className="text-muted-foreground hover:text-foreground transition-colors">Tools</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">API Documentation</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Release Notes</a></li>
+              <li><a href="#tools" className="text-muted-foreground hover:text-foreground transition-colors">PDF Editor</a></li>
+              <li><a href="#tools" className="text-muted-foreground hover:text-foreground transition-colors">PDF Converter</a></li>
+              <li><a href="#tools" className="text-muted-foreground hover:text-foreground transition-colors">E-Signature</a></li>
+              <li><a href="#tools" className="text-muted-foreground hover:text-foreground transition-colors">PDF Compressor</a></li>
+              <li><a href="#tools" className="text-muted-foreground hover:text-foreground transition-colors">All PDF Tools</a></li>
             </ul>
           </div>
           
@@ -45,7 +46,6 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Knowledge Base</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Blog</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Tutorials</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Support</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Community</a></li>
@@ -53,10 +53,9 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">About</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Our Mission</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a></li>
@@ -66,14 +65,11 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-border text-center md:flex md:justify-between md:items-center">
           <p className="text-muted-foreground mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} PerfectPDF. All rights reserved.
+            &copy; {new Date().getFullYear()} PerfectPDF. All PDF tools are free forever.
           </p>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center">
-            <Button variant="outline" className="border-border text-muted-foreground hover:text-foreground hover:border-pdf-primary">
-              Download Desktop App
-            </Button>
+          <div>
             <Button className="bg-pdf-primary hover:bg-pdf-accent">
-              Get Started
+              Get Started Now
             </Button>
           </div>
         </div>

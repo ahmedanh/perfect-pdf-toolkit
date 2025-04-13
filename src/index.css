@@ -5,38 +5,6 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
@@ -64,6 +32,8 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+
+    --radius: 0.5rem;
   }
 }
 
@@ -79,8 +49,8 @@
 
 @layer components {
   .feature-card {
-    @apply relative overflow-hidden bg-white p-6 rounded-xl shadow-md border border-gray-100 transition-all
-    hover:shadow-lg hover:border-pdf-light hover:-translate-y-1;
+    @apply relative overflow-hidden bg-secondary/50 p-6 rounded-xl shadow-md border border-border transition-all
+    hover:shadow-lg hover:border-pdf-primary hover:-translate-y-1;
   }
   
   .feature-icon {
@@ -88,7 +58,7 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-pdf-primary to-pdf-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-pdf-primary to-pdf-secondary bg-clip-text text-transparent;
   }
   
   .btn-primary {
@@ -99,5 +69,9 @@
   .btn-outline {
     @apply border-2 border-pdf-primary text-pdf-primary hover:bg-pdf-light font-medium
     py-2 px-6 rounded-lg transition-all;
+  }
+
+  .glass-card {
+    @apply bg-secondary/30 backdrop-blur-sm border border-border rounded-xl;
   }
 }

@@ -4,27 +4,20 @@ import { CheckCircle2 } from "lucide-react";
 
 type PlanProps = {
   name: string;
-  price: string;
   description: string;
   features: string[];
-  isPopular?: boolean;
   ctaText: string;
 };
 
-const PlanCard = ({ name, price, description, features, isPopular, ctaText }: PlanProps) => {
+const PlanCard = ({ name, description, features, ctaText }: PlanProps) => {
   return (
-    <div className={`bg-white rounded-xl shadow-md p-8 border ${isPopular ? 'border-pdf-primary' : 'border-gray-100'} relative`}>
-      {isPopular && (
-        <div className="absolute top-0 right-6 -translate-y-1/2 bg-pdf-primary text-white text-sm px-3 py-1 rounded-full font-medium">
-          Most Popular
-        </div>
-      )}
+    <div className="glass-card p-8 relative">
       <h3 className="text-2xl font-bold mb-2">{name}</h3>
       <div className="mb-4">
-        <span className="text-3xl font-bold">{price}</span>
-        {price !== "Free" && <span className="text-gray-500 ml-1">/month</span>}
+        <span className="text-3xl font-bold text-pdf-primary">Free</span>
+        <span className="text-muted-foreground ml-1">forever</span>
       </div>
-      <p className="text-gray-600 mb-6">{description}</p>
+      <p className="text-muted-foreground mb-6">{description}</p>
       
       <ul className="space-y-3 mb-8">
         {features.map((feature, index) => (
@@ -35,9 +28,7 @@ const PlanCard = ({ name, price, description, features, isPopular, ctaText }: Pl
         ))}
       </ul>
       
-      <Button 
-        className={`w-full ${isPopular ? 'bg-pdf-primary hover:bg-pdf-accent' : 'bg-gray-800 hover:bg-gray-700'}`}
-      >
+      <Button className="w-full bg-pdf-primary hover:bg-pdf-accent">
         {ctaText}
       </Button>
     </div>
@@ -47,48 +38,25 @@ const PlanCard = ({ name, price, description, features, isPopular, ctaText }: Pl
 const PricingSection = () => {
   const plans = [
     {
-      name: "Basic",
-      price: "Free",
-      description: "For occasional PDF needs",
+      name: "Complete Solution",
+      description: "All professional PDF features - completely free",
       features: [
-        "Edit basic text and images",
-        "Convert between 3 formats",
-        "Basic compression",
-        "5 PDFs per month",
-        "2 MB file size limit"
-      ],
-      ctaText: "Get Started",
-    },
-    {
-      name: "Professional",
-      price: "$12.99",
-      description: "For regular PDF work",
-      features: [
-        "Advanced text and image editing",
+        "Edit text and images directly",
         "Convert between all formats",
+        "E-signature capabilities",
         "Advanced compression",
-        "E-signatures",
+        "Password protection & encryption",
+        "Merge and split PDFs",
         "OCR technology",
-        "Unlimited PDFs",
-        "50 MB file size limit"
+        "Online sharing & collaboration",
+        "Annotation & commenting tools",
+        "Page management tools",
+        "Redaction tools",
+        "Cloud integration",
+        "Accessibility features",
+        "No file size limits"
       ],
-      isPopular: true,
-      ctaText: "Try 7 Days Free",
-    },
-    {
-      name: "Enterprise",
-      price: "$29.99",
-      description: "For business teams",
-      features: [
-        "All Professional features",
-        "Team collaboration",
-        "Advanced security features",
-        "API access",
-        "Priority support",
-        "Audit trails",
-        "500 MB file size limit"
-      ],
-      ctaText: "Contact Sales",
+      ctaText: "Get Started Now",
     }
   ];
   
@@ -96,23 +64,16 @@ const PricingSection = () => {
     <section id="pricing" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your needs
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">100% Free Professional PDF Tools</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            We believe PDF tools should be accessible to everyone
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-3xl mx-auto">
           {plans.map((plan, index) => (
             <PlanCard key={index} {...plan} />
           ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <p className="text-gray-600 mb-4">Need a custom solution for your organization?</p>
-          <Button variant="outline" className="border-pdf-primary text-pdf-primary hover:bg-pdf-light">
-            Contact Us for Custom Pricing
-          </Button>
         </div>
       </div>
     </section>

@@ -64,11 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				pdf: {
-					primary: '#60a5fa', // Changed to a blue that works better in dark mode
-					secondary: '#93c5fd',
-					accent: '#2563eb',
-					light: '#1e3a8a',
-					dark: '#1e3a8a'
+					primary: '#2563EB',
+					secondary: '#3B82F6',
+					accent: '#1E40AF',
+					light: '#DBEAFE',
+					dark: '#1E3A8A'
 				}
 			},
 			borderRadius: {

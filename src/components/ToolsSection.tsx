@@ -35,8 +35,7 @@ const ToolsSection = () => {
     if (activeTab === "convert") {
       if (!isPdfFile(file)) {
         toast("Invalid file type", {
-          description: "Please select a PDF file",
-          variant: "destructive"
+          description: "Please select a PDF file"
         });
         event.target.value = "";
         return;
@@ -64,8 +63,7 @@ const ToolsSection = () => {
     if (activeTab === "convert") {
       if (!isPdfFile(file)) {
         toast("Invalid file type", {
-          description: "Please select a PDF file",
-          variant: "destructive"
+          description: "Please select a PDF file"
         });
         return;
       }
@@ -85,8 +83,7 @@ const ToolsSection = () => {
   const handleConvert = async (format: ConversionFormat) => {
     if (!selectedFile) {
       toast("No file selected", {
-        description: "Please select a PDF file to convert",
-        variant: "destructive"
+        description: "Please select a PDF file to convert"
       });
       return;
     }
@@ -105,8 +102,7 @@ const ToolsSection = () => {
       }
     } catch (error) {
       toast("Conversion failed", {
-        description: "There was an error converting your file",
-        variant: "destructive"
+        description: "There was an error converting your file"
       });
     } finally {
       setIsProcessing(false);

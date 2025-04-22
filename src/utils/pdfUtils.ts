@@ -1,4 +1,3 @@
-
 import { toast } from "@/components/ui/sonner";
 
 export type ConversionFormat = 
@@ -44,7 +43,6 @@ export const convertPdf = async (
       } catch (error) {
         toast("Conversion failed", {
           description: "Could not convert the PDF file",
-          variant: "destructive",
         });
         resolve(null);
       }

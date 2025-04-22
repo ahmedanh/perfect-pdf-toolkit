@@ -38,13 +38,11 @@ export const convertPdf = async (
         const mockData = new Blob([file], { type: getMimeType(targetFormat) });
         resolve(mockData);
         
-        toast({
-          title: "Conversion successful",
+        toast("Conversion successful", {
           description: `Converted to ${targetFormat.toUpperCase()} format`,
         });
       } catch (error) {
-        toast({
-          title: "Conversion failed",
+        toast("Conversion failed", {
           description: "Could not convert the PDF file",
           variant: "destructive",
         });

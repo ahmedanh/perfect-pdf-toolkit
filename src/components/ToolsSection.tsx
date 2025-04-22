@@ -1,4 +1,3 @@
-
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -35,8 +34,7 @@ const ToolsSection = () => {
     
     if (activeTab === "convert") {
       if (!isPdfFile(file)) {
-        toast({
-          title: "Invalid file type",
+        toast("Invalid file type", {
           description: "Please select a PDF file",
           variant: "destructive"
         });
@@ -46,8 +44,7 @@ const ToolsSection = () => {
     }
     
     setSelectedFile(file);
-    toast({
-      title: "File selected",
+    toast("File selected", {
       description: `${file.name} (${(file.size / 1024 / 1024).toFixed(2)}MB)`,
     });
   };
@@ -66,8 +63,7 @@ const ToolsSection = () => {
     
     if (activeTab === "convert") {
       if (!isPdfFile(file)) {
-        toast({
-          title: "Invalid file type",
+        toast("Invalid file type", {
           description: "Please select a PDF file",
           variant: "destructive"
         });
@@ -76,8 +72,7 @@ const ToolsSection = () => {
     }
     
     setSelectedFile(file);
-    toast({
-      title: "File selected",
+    toast("File selected", {
       description: `${file.name} (${(file.size / 1024 / 1024).toFixed(2)}MB)`,
     });
   };
@@ -89,8 +84,7 @@ const ToolsSection = () => {
 
   const handleConvert = async (format: ConversionFormat) => {
     if (!selectedFile) {
-      toast({
-        title: "No file selected",
+      toast("No file selected", {
         description: "Please select a PDF file to convert",
         variant: "destructive"
       });
@@ -110,8 +104,7 @@ const ToolsSection = () => {
         downloadBlob(convertedFile, newFilename);
       }
     } catch (error) {
-      toast({
-        title: "Conversion failed",
+      toast("Conversion failed", {
         description: "There was an error converting your file",
         variant: "destructive"
       });
